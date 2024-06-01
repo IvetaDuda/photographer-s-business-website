@@ -2,7 +2,8 @@ import BackgroundAnimation from '@/components/BackgroundAnimation/BackgroundAnim
 import Footer from '@/components/Footer/Footer';
 import Header from '@/components/Header/Header';
 import { SiteProvider } from '@/context/SiteContext';
-import { Inter, Montserrat, Playfair_Display } from 'next/font/google';
+import { Montserrat } from 'next/font/google';
+// import { Inter, Montserrat, Playfair_Display } from 'next/font/google';
 import './globals.css';
 
 // const inter = Inter({ subsets: ['latin'] });

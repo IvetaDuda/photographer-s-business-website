@@ -16,14 +16,14 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={`${styles.heroContainer} container`}>
-        <div className={styles.logoContainer}>
+        <Link href="/" className={styles.logoContainer}>
           <Image
             src="/camera.png"
             fill={true}
             alt="logo"
             className={styles.logo}
           />
-        </div>
+        </Link>
         <ul className={styles.headerLinks}>
           {navLinks.map(({ id, title, href }) => (
             <li className={styles.link} key={id}>
