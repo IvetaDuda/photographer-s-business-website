@@ -1,0 +1,66 @@
+@import '../../../app/variables';
+
+.burgerMenu {
+  position: fixed;
+  top: 10px;
+  right: 12px;
+  z-index: 999;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+
+  @media screen and (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.burgerMenu:before,
+.burgerMenu:after,
+.burgerMenu .burgerMenuBtnAfter {
+  background-color: $lightMainColor;
+  content: '';
+  display: block;
+  width: 35px;
+  height: 4px;
+  border-radius: 3px;
+  margin: 4px 0;
+  transition: 0.5s;
+}
+
+.burgerMenuOpen {
+  position: fixed;
+  top: 10px;
+  right: 12px;
+  z-index: 999;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+
+  &::before,
+  &::after,
+  & .burgerMenuBtnAfter {
+    background: $lightMainColor;
+    content: '';
+    display: block;
+    width: 35px;
+    height: 4px;
+    border-radius: 3px;
+    margin: 4px 0;
+    transition: 0.5s;
+  }
+  &::before {
+    transform: translateY(10px) rotate(135deg);
+  }
+  &::after {
+    transform: translateY(-7px) rotate(-135deg);
+  }
+  & .burgerMenuBtnAfter {
+    transform: scale(0);
+  }
+
+  @media screen and (min-width: 1024px) {
+    display: none;
+  }
+}

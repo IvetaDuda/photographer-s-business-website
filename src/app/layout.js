@@ -1,9 +1,21 @@
+import BackgroundAnimation from '@/components/BackgroundAnimation/BackgroundAnimation';
 import Footer from '@/components/Footer/Footer';
 import Header from '@/components/Header/Header';
-import { Inter } from 'next/font/google';
+import { SiteProvider } from '@/context/SiteContext';
+import { Inter, Montserrat, Playfair_Display } from 'next/font/google';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+// const inter = Inter({ subsets: ['latin'] });
+
+const montserrat = Montserrat({
+  subsets: ['latin', 'cyrillic'],
+  weights: [400, 500, 700], // Ви можете обрати потрібні ваги
+});
+
+// const playfairDisplay = Playfair_Display({
+//   subsets: ['latin', 'cyrillic'],
+//   weights: [400, 700], // Ви можете обрати потрібні ваги
+// });
 
 export const metadata = {
   title: 'Create Next App',
@@ -13,10 +25,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+      <body className={montserrat.className}>
+        <BackgroundAnimation />
+        <SiteProvider>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </SiteProvider>
       </body>
     </html>
   );

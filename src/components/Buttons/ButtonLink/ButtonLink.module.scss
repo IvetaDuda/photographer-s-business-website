@@ -1,0 +1,14 @@
+@import '../../../app/variables';
+
+.button {
+  padding: 10px 20px;
+  background-color: $accentColor;
+  // background-color: #ff6347;
+  color: $lightMainColor;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #af240c;
+}

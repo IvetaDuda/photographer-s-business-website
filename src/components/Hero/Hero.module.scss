@@ -1,0 +1,159 @@
+@import '../../app/variables';
+
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.heroContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  padding: 16px 0;
+  @media screen and (min-width: $tablet) {
+    padding: 36px 0;
+  }
+}
+
+.heroImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: -2;
+}
+
+.heroImage.active {
+  opacity: 1;
+  z-index: -1;
+}
+
+.heroContent {
+  position: relative;
+  height: 100%;
+  color: $lightMainColor;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: column;
+  z-index: 5;
+}
+
+.heroTitle {
+  font-size: 24px;
+  line-height: 1.2;
+  margin-bottom: 8px;
+  @media screen and (min-width: $mobile) {
+    font-size: 36px;
+  }
+  @media screen and (min-width: $tablet) {
+    font-size: 42px;
+  }
+  @media screen and (min-width: $laptop) {
+    font-size: 52px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 68px;
+  }
+}
+
+.heroSubtitle {
+  font-size: 12px;
+  margin-bottom: 16px;
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+  @media screen and (min-width: $laptop) {
+    font-size: 16px;
+  }
+}
+
+.heroDesc {
+  font-size: 20px;
+  margin-bottom: 16px;
+  @media screen and (min-width: $mobile) {
+    font-size: 24px;
+  }
+  @media screen and (min-width: $tablet) {
+    font-size: 32px;
+  }
+  @media screen and (min-width: $laptop) {
+    font-size: 36px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 48px;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  column-gap: 16px;
+  margin-top: 16px;
+  @media screen and (min-width: $tablet) {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    width: auto;
+  }
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 12px 0px;
+  background-color: #717171;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  cursor: pointer;
+  @media screen and (min-width: $tablet) {
+    height: 15px;
+    width: 15px;
+  }
+}
+
+.activeDot {
+  position: relative;
+  background-color: #bbb;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 35px;
+    width: 35px;
+    display: block;
+    background-color: transparent;
+    border: 1px solid #717171;
+    border-radius: 50%;
+    transition: border 0.6s ease;
+    @media screen and (min-width: $mobile) {
+      height: 30px;
+      width: 30px;
+    }
+    @media screen and (min-width: $tablet) {
+      height: 35px;
+      width: 35px;
+    }
+  }
+}
