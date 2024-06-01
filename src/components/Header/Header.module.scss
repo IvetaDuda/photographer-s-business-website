@@ -14,45 +14,6 @@
   justify-content: space-between;
 }
 
-.logoContainer {
-  position: relative;
-  width: 25px;
-  height: 25px;
-  z-index: 10;
-  &::before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 40px;
-    height: 40px;
-    background-color: #ffffffb6;
-    border-radius: 73% 35% 77% 31% / 66% 93% 51% 70%;
-    @media screen and (min-width: $tablet) {
-      width: 40px;
-      height: 40px;
-    }
-    @media screen and (min-width: $laptop) {
-      width: 50px;
-      height: 50px;
-    }
-  }
-  @media screen and (min-width: $tablet) {
-    width: 25px;
-    height: 25px;
-  }
-  @media screen and (min-width: $laptop) {
-    width: 35px;
-    height: 35px;
-  }
-}
-
-.logo {
-  object-fit: cover;
-}
-
 .headerLinks {
   display: none;
   @media screen and (min-width: $laptop) {

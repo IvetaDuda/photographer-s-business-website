@@ -2,11 +2,11 @@
 
 import { SiteContext } from '@/context/SiteContext';
 import { navLinks } from '@/data/navLinks';
-import Image from 'next/image';
 import Link from 'next/link';
 import { useContext } from 'react';
 import BurgerBtn from '../Buttons/BurgerBtn/BurgerBtn';
 import ButtonLink from '../Buttons/ButtonLink/ButtonLink';
+import Logo from '../Buttons/Logo/Logo';
 import BurgerMenu from './BurgerMenu/BurgerMenu';
 import styles from './Header.module.scss';
 
@@ -16,14 +16,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={`${styles.heroContainer} container`}>
-        <Link href="/" className={styles.logoContainer}>
-          <Image
-            src="/camera.png"
-            fill={true}
-            alt="logo"
-            className={styles.logo}
-          />
-        </Link>
+        <Logo />
         <ul className={styles.headerLinks}>
           {navLinks.map(({ id, title, href }) => (
             <li className={styles.link} key={id}>

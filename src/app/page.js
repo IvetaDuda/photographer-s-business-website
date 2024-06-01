@@ -1,3 +1,4 @@
+import AboutMeHome from '@/components/AboutMeHome/AboutMeHome';
 import Hero from '@/components/Hero/Hero';
 import dynamic from 'next/dynamic';
 // import styles from './page.module.css';
@@ -11,5 +12,10 @@ const HeroDynamic = dynamic(() => import('@/components/Hero/Hero'), {
 });
 
 export default function Home() {
-  return <HeroDynamic />;
+  return (
+    <>
+      <HeroDynamic />
+      <AboutMeHome />
+    </>
+  );
 }
