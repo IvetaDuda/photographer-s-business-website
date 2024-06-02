@@ -1,5 +1,11 @@
+import ContactsPage from '@/section/ContactsPage/ContactsPage';
+
 const Contacts = () => {
-  return <div>Contacts</div>;
+  return (
+    <>
+      <ContactsPage />
+    </>
+  );
 };
 
 export default Contacts;
