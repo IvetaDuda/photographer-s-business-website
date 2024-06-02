@@ -1,0 +1,101 @@
+@import '../../app/variables';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+
+.formTitle {
+  color: $lightMainColor;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-align: center;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  @media screen and (min-width: 768px) {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+}
+
+.inputGroup {
+  position: relative;
+}
+
+.inputGroupName {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 24px;
+  @media screen and (min-width: 768px) {
+    row-gap: 0px;
+    column-gap: 24px;
+    flex-direction: row;
+  }
+}
+
+.formInput {
+  width: 300px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-top: 2px solid #661d1871;
+  border-left: 2px solid #661d1871;
+  border-right: 2px solid #661d1871;
+  border-bottom: 2px solid $accentColor;
+  border-radius: 4px;
+  padding: 16px 20px;
+  color: $lightMainColor;
+
+  transition: border-bottom 0.4s ease, transform 0.6s ease;
+  &:hover,
+  &:focus {
+    border-bottom: 2px solid $hoverBtnColor;
+  }
+  &:focus + .formLabel,
+  &:not(:placeholder-shown) + .formLabel {
+    transform: translateY(-100%) scale(0.9);
+    padding-inline: 2px;
+    color: #e94a3f;
+    background: linear-gradient(
+      to top,
+      $backgroundColor 50%,
+      $backgroundColor 50%
+    );
+  }
+}
+
+.formLabel {
+  position: absolute;
+  top: 10px;
+  left: 16px;
+  color: $lightMainColor;
+  pointer-events: none;
+  @media screen and (min-width: 768px) {
+    top: 13px;
+    left: 20px;
+  }
+}
+
+.formInputTextarea {
+  width: 100%;
+  height: 120px;
+  resize: none;
+}
+
+.formButton {
+  padding: 10px 20px;
+  background-color: $accentColor;
+  color: $lightMainColor;
+  text-decoration: none;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  transition: background-color 0.4s ease;
+  &:hover,
+  &:focus {
+    background-color: $hoverBtnColor;
+  }
+}

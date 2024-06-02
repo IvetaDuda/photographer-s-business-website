@@ -1,3 +1,5 @@
+'use client';
+
 import ButtonLink from '@/components/Buttons/ButtonLink/ButtonLink';
 import { SiteContext } from '@/context/SiteContext';
 import { navLinks } from '@/data/navLinks';
@@ -11,7 +13,7 @@ const BurgerMenu = () => {
   return (
     <div
       className={`${styles.burgerMenuContainerOpen} ${
-        burgerMenu ? styles.open : styles.close
+        burgerMenu ? styles.open : ''
       }`}
     >
       <ul className={styles.headerLinks}>

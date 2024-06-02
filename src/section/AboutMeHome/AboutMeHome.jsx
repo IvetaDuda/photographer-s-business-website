@@ -1,20 +1,10 @@
-import Image from 'next/image';
-import ButtonLink from '../Buttons/ButtonLink/ButtonLink';
+import ButtonLink from '../../components/Buttons/ButtonLink/ButtonLink';
 import styles from './AboutMeHome.module.scss';
 
 const AboutMeHome = () => {
   return (
     <section>
       <div className={`container ${styles.aboutMeContainer}`}>
-        <div className={styles.imgContainer}>
-          <Image
-            src="/shivam-baraik-PxA4NdjL5Rw-unsplash.webp"
-            fill={true}
-            alt="camera"
-            className={styles.img}
-            sizes="100%"
-          />
-        </div>
         <ul className={styles.textList}>
           <li className={styles.text}>
             Привіт! Я Данієль Ширан, професійний фотограф.
@@ -30,7 +20,7 @@ const AboutMeHome = () => {
             та зв&rsquo;язатися зі мною для обговорення ваших побажань.
           </li>
           <li>
-            <ButtonLink title="Переглянути Портфоліо" href="/portfolio" />
+            <ButtonLink title="Більше про мене" href="/aboutUs" />
           </li>
         </ul>
       </div>

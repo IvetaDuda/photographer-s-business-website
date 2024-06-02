@@ -37,16 +37,16 @@
   }
 }
 
-.burgerMenuContainerOpen.close {
-  animation: burgerMenuClose 1.5s 0.5s linear forwards;
-}
+// .burgerMenuContainerOpen.close {
+//   animation: burgerMenuClose 1.5s 0.5s linear forwards;
+// }
 
-@keyframes burgerMenuClose {
-  to {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-}
+// @keyframes burgerMenuClose {
+//   to {
+//     opacity: 0;
+//     transform: translateX(100%);
+//   }
+// }
 
 .headerLinks {
   display: flex;
@@ -63,8 +63,4 @@
   &:focus {
     color: $accentColor;
   }
-}
-
-.btn {
-  // width: max-content;
 }

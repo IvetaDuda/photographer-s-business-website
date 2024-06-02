@@ -3,12 +3,13 @@
 .button {
   padding: 10px 20px;
   background-color: $accentColor;
-  // background-color: #ff6347;
   color: $lightMainColor;
   text-decoration: none;
   border-radius: 5px;
-}
 
-.button:hover {
-  background-color: #af240c;
+  transition: background-color 0.4s ease;
+  &:hover,
+  &:focus {
+    background-color: $hoverBtnColor;
+  }
 }

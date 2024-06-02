@@ -2,7 +2,7 @@
 
 import { heroImages } from '@/data/heroImages';
 import { useEffect, useState } from 'react';
-import ButtonLink from '../Buttons/ButtonLink/ButtonLink';
+import ButtonLink from '../../components/Buttons/ButtonLink/ButtonLink';
 import styles from './Hero.module.scss';
 
 const Hero = () => {
