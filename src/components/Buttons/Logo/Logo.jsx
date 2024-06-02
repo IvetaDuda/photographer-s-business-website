@@ -5,7 +5,13 @@ import styles from './Logo.module.scss';
 const Logo = () => {
   return (
     <Link href="/" className={styles.logoContainer}>
-      <Image src="/camera.png" fill={true} alt="logo" className={styles.logo} />
+      <Image
+        src="/camera.png"
+        fill={true}
+        alt="logo"
+        className={styles.logo}
+        sizes="100%"
+      />
     </Link>
   );
 };

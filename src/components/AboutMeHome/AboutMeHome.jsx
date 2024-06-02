@@ -12,6 +12,7 @@ const AboutMeHome = () => {
             fill={true}
             alt="camera"
             className={styles.img}
+            sizes="100%"
           />
         </div>
         <ul className={styles.textList}>
