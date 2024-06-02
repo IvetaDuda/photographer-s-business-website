@@ -5,6 +5,15 @@
   height: 100vh;
   overflow: hidden;
 }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
 
 .heroContainer {
   position: absolute;
@@ -17,6 +26,8 @@
   display: flex;
   align-items: flex-end;
   padding: 16px 0;
+
+  animation: fadeIn 0.8s ease-in-out forwards;
   @media screen and (min-width: $tablet) {
     padding: 36px 0;
   }
@@ -33,11 +44,25 @@
   opacity: 0;
   transition: opacity 1s ease-in-out;
   z-index: -2;
+
+  animation: fadeIn 0.8s ease-in-out forwards;
 }
 
 .heroImage.active {
   opacity: 1;
   z-index: -1;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .heroContent {
@@ -49,6 +74,8 @@
   align-items: flex-start;
   flex-direction: column;
   z-index: 5;
+
+  animation: fadeUp 0.8s ease-in-out forwards;
 }
 
 .heroTitle {

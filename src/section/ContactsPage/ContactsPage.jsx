@@ -9,8 +9,8 @@ const ContactsPage = () => {
         <div className={styles.contact}>
           <h1 className={styles.title}>Контакти</h1>
           <h3 className={styles.subTitle}>
-            Зв&rsquo;яжіться зі мною, я завжди готовий до нових проектів та
-            співпраці.
+            <span className="accentText">Зв&rsquo;яжіться зі мною</span>, я
+            завжди готовий до нових проектів та співпраці.
           </h3>
           <ul className={styles.contactList}>
             <li>
@@ -27,7 +27,7 @@ const ContactsPage = () => {
               </a>
             </li>
             <li>
-              <p className={styles.addres}>м. Київ, вул. Фотографів, 12</p>
+              <p className="accentText">м. Київ, вул. Фотографів, 12</p>
             </li>
           </ul>
           <SocialLinks socialList={styles.socialList} />

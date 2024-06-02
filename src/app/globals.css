@@ -72,3 +72,7 @@ button {
   padding: 0px 15px;
   margin: 0 auto;
 }
+
+.accentText {
+  color: #f0574c;
+}

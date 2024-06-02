@@ -7,8 +7,8 @@ const AboutMeHome = () => {
       <div className={`container ${styles.aboutMeContainer}`}>
         <ul className={styles.textList}>
           <li className={styles.text}>
-            Привіт! Я <span className={styles.accentText}>Данієль Ширан</span>,
-            професійний <span className={styles.accentText}>фотограф</span>.
+            Привіт! Я <span className="accentText">Данієль Ширан</span>,
+            професійний <span className="accentText">фотограф</span>.
           </li>
           <li className={styles.text}>
             Моя пристрасть &ndash; захоплювати найцінніші моменти та
@@ -18,9 +18,9 @@ const AboutMeHome = () => {
           </li>
           <li className={styles.text}>
             Дякую, що завітали на мій сайт. Запрошую переглянути моє{' '}
-            <span className={styles.accentText}>портфоліо</span> та{' '}
-            <span className={styles.accentText}>зв&rsquo;язатися зі мною</span>{' '}
-            для обговорення ваших побажань.
+            <span className="accentText">портфоліо</span> та{' '}
+            <span className="accentText">зв&rsquo;язатися зі мною</span> для
+            обговорення ваших побажань.
           </li>
           <li>
             <ButtonLink title="Більше про мене" href="/aboutUs" />
