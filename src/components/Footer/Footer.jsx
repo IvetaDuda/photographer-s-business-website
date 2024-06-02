@@ -1,5 +1,6 @@
 import { socialLinks } from '@/data/socialLinks';
 import Logo from '../Buttons/Logo/Logo';
+import SocialLinks from '../SocialLinks/SocialLinks';
 import styles from './Footer.module.scss';
 
 const Footer = () => {
@@ -29,17 +30,7 @@ const Footer = () => {
               </a>
             </li>
           </ul>
-          <ul className={styles.socialList}>
-            {socialLinks.map(({ id, title, href }) => (
-              <li className={styles.socialItem} key={id}>
-                <a href="#" target="_blank" rel="noopener noreferrer">
-                  <svg className={styles.socialIcon}>
-                    <use href={`sprite.svg#${href}`} />
-                  </svg>
-                </a>
-              </li>
-            ))}
-          </ul>
+          <SocialLinks socialList={styles.socialList} />
         </div>
         <p className={styles.copy}>© 2024 Данієль Ширан. Усі права захищено.</p>
       </div>

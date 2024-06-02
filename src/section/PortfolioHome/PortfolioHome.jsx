@@ -4,8 +4,9 @@ import styles from './PortfolioHome.module.scss';
 
 const PortfolioHome = () => {
   return (
-    <section>
+    <section className={styles.portfolio}>
       <div className={`container`}>
+        <h2 className={styles.title}>Портфоліо</h2>
         <ul className={styles.portfolioList}>
           {portfolio.map(({ id, title, services, img }) => (
             <li
@@ -14,7 +15,7 @@ const PortfolioHome = () => {
               style={{ backgroundImage: `url(${img})` }}
             >
               <div className={styles.portfolioContent}>
-                <h3 className={styles.title}>{title}</h3>
+                <h3 className={styles.titleContent}>{title}</h3>
                 <ul className={styles.servicesList}>
                   {services.map((value, index) => (
                     <li key={index}>&#9679; {value}</li>
