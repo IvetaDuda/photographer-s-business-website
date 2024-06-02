@@ -12,7 +12,7 @@ const PortfolioHome = () => {
             <li
               key={id}
               className={styles.portfolioItem}
-              style={{ backgroundImage: `url(${img})` }}
+              style={{ backgroundImage: `url(${img[0]})` }}
             >
               <div className={styles.portfolioContent}>
                 <h3 className={styles.titleContent}>{title}</h3>

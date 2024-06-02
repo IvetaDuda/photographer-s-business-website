@@ -8,7 +8,7 @@ export const portfolio = [
       'Передвесільна зйомка (лавсторі)',
       'Поствесільна зйомка',
     ],
-    img: '/portfolio/wedding.webp',
+    img: ['/portfolio/wedding.webp', '/portfolio/wedding2.webp'],
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ export const portfolio = [
       'Дитячі фотосесії',
       'Фотосесії для вагітних',
     ],
-    img: '/portfolio/portret.webp',
+    img: ['/portfolio/portret.webp', '/portfolio/family.webp'],
   },
   {
     id: 3,
@@ -30,7 +30,10 @@ export const portfolio = [
       'Фотозйомка для соціальних мереж',
       'Фотозйомка для вебсайтів та каталогів',
     ],
-    img: '/portfolio/Commercial-photography.webp',
+    img: [
+      '/portfolio/Commercial-photography.webp',
+      '/portfolio/Commercial-photography2.webp',
+    ],
   },
   {
     id: 4,
@@ -40,7 +43,7 @@ export const portfolio = [
       'Фотозйомка вечірок та свят',
       'Фотозйомка концертів та виступів',
     ],
-    img: '/portfolio/party.webp',
+    img: ['/portfolio/party.webp', '/portfolio/party2.webp'],
   },
   {
     id: 5,
@@ -49,6 +52,6 @@ export const portfolio = [
       'Фотозйомка природи та міських пейзажів',
       'Продається як готові друковані роботи або цифрові зображення',
     ],
-    img: '/portfolio/mountain.webp',
+    img: ['/portfolio/mountain.webp', '/portfolio/mountain2.webp'],
   },
 ];

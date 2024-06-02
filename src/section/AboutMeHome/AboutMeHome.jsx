@@ -23,7 +23,7 @@ const AboutMeHome = () => {
             обговорення ваших побажань.
           </li>
           <li>
-            <ButtonLink title="Більше про мене" href="/aboutUs" />
+            <ButtonLink title="Більше про мене" href="/aboutMe" />
           </li>
         </ul>
       </div>

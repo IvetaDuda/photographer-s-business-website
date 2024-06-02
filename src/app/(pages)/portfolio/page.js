@@ -1,5 +1,7 @@
+import PortfolioPage from '@/section/PortfolioPage/PortfolioPage';
+
 const Portfolio = () => {
-  return <div>Portfolio</div>;
+  return <PortfolioPage />;
 };
 
 export default Portfolio;
