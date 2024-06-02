@@ -1,10 +1,22 @@
 @import '../../../app/variables';
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .logoContainer {
   position: relative;
   width: 25px;
   height: 25px;
   z-index: 10;
+
+  animation: fadeIn 0.8s ease-in-out forwards;
   &::before {
     content: '';
     display: block;
