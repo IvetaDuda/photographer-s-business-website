@@ -9,7 +9,8 @@ const ContactsPage = () => {
         <div className={styles.contact}>
           <h1 className={styles.title}>Контакти</h1>
           <h3 className={styles.subTitle}>
-            Зв'яжіться зі мною, я завжди готовий до нових проектів та співпраці.
+            Зв&rsquo;яжіться зі мною, я завжди готовий до нових проектів та
+            співпраці.
           </h3>
           <ul className={styles.contactList}>
             <li>
