@@ -30,7 +30,8 @@ const Header = () => {
           customStyles={styles.btn}
         />
         <BurgerBtn />
-        {burgerMenu && <BurgerMenu />}
+        <BurgerMenu />
+        {/* {burgerMenu && <BurgerMenu />} */}
       </div>
     </header>
   );

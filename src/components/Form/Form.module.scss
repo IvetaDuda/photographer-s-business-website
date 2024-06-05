@@ -53,6 +53,8 @@
   padding: 16px 20px;
   color: $lightMainColor;
 
+  // box-shadow: rgba(180, 28, 28, 0.15) 2.4px 2.4px 3.2px;
+
   transition: border-bottom 0.4s ease, transform 0.6s ease;
   &:hover,
   &:focus {

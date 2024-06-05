@@ -1,15 +1,11 @@
 @import '../../../app/variables';
 
-.burgerMenuContainerOpen {
+.burgerMenuContainer {
   width: 100vw;
   height: 100vh;
   position: fixed;
   top: 0;
   right: 0;
-  opacity: 0;
-  transform: translateX(100%);
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  opacity: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,6 +14,7 @@
   background-color: $backgroundColor;
   -webkit-box-shadow: 0px 0px 23px 8px rgba(0, 0, 0, 0.84);
   box-shadow: 0px 0px 23px 8px rgba(0, 0, 0, 0.84);
+
   @media screen and (min-width: $tablet) {
     width: 60vh;
   }
@@ -26,27 +23,17 @@
   }
 }
 
-.burgerMenuContainerOpen.open {
-  animation: burgerMenuOpen 0.5s 0.5s linear forwards;
+.burgerMenuContainerOpen {
+  opacity: 1;
+  transform: translateX(0);
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-@keyframes burgerMenuOpen {
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.burgerMenuContainerClose {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
-
-// .burgerMenuContainerOpen.close {
-//   animation: burgerMenuClose 1.5s 0.5s linear forwards;
-// }
-
-// @keyframes burgerMenuClose {
-//   to {
-//     opacity: 0;
-//     transform: translateX(100%);
-//   }
-// }
 
 .headerLinks {
   display: flex;

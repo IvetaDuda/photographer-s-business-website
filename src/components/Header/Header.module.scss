@@ -8,10 +8,22 @@
   z-index: 20;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .heroContainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  animation: fadeIn 0.8s ease-in-out forwards;
 }
 
 .headerLinks {

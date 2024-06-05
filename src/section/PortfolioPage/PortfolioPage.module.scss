@@ -36,11 +36,15 @@
   letter-spacing: 1.2px;
   margin-bottom: 18px;
   text-transform: uppercase;
+  text-align: center;
 
   animation: fadeIn 0.8s ease-in-out forwards;
   @media screen and (min-width: $tablet) {
     font-size: 36px;
     margin-bottom: 42px;
+  }
+  @media screen and (min-width: $laptop) {
+    text-align: start;
   }
 }
 
@@ -52,38 +56,225 @@
   animation: fadeUp 0.8s ease-in-out forwards;
 
   @media screen and (min-width: $tablet) {
-    grid-template-columns: repeat(2, 1fr);
-    -webkit-box-pack: space-around;
-    -ms-flex-pack: space-around;
-    justify-content: space-around;
-    row-gap: 18px;
-    -webkit-column-gap: 24px;
-    -moz-column-gap: 24px;
-    column-gap: 24px;
-  }
-  @media screen and (min-width: $laptop) {
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 24px;
-  }
-
-  @media screen and (min-width: $desktop) {
+    grid-template-columns: repeat(1, 1fr);
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    row-gap: 18px;
+  }
+  @media screen and (min-width: $laptop) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 42px;
+  }
+
+  @media screen and (min-width: $desktop) {
+  }
+}
+
+.portfolioCard {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  @media screen and (min-width: $laptop) {
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    &:nth-child(odd) {
+      flex-direction: row;
+    }
+  }
+}
+
+.portfolioContent {
+  display: none;
+
+  @media screen and (min-width: $laptop) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    column-gap: 0px;
+  }
+}
+
+.subtitle {
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  color: $lightMainColor;
+  margin-bottom: 24px;
+  @media screen and (min-width: $tablet) {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+  @media screen and (min-width: $laptop) {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+}
+
+.servicesList {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  color: $lightMainColor;
+  @media screen and (min-width: $tablet) {
+    font-size: 12px;
+    margin-bottom: 24px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 20px;
+    margin-bottom: 0px;
+  }
+}
+
+.itemImgContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 24px;
+  @media screen and (min-width: $tablet) {
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    column-gap: 24px;
+    row-gap: 0px;
+  }
+  @media screen and (min-width: $laptop) {
+    width: inherit;
   }
 }
 
 .imgContainer {
   position: relative;
   width: 100%;
-  height: 500px;
+  max-width: 400px;
+  height: 430px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   border-radius: 4px;
   overflow: hidden;
   display: block;
+  // cursor: pointer;
+  // &:hover,
+  // &:focus {
+  //   z-index: 1;
+  // }
+  @media screen and (min-width: $tablet) {
+    height: 430px;
+  }
+  @media screen and (min-width: $laptop) {
+    width: 300px;
+    height: 430px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 350px;
+    height: 500px;
+  }
 }
 
 .img {
   object-fit: cover;
 }
+
+// @import '../../app/variables';
+
+// @keyframes fadeUp {
+//   0% {
+//     opacity: 0;
+//     transform: translateY(30px);
+//   }
+
+//   100% {
+//     opacity: 1;
+//     transform: translateY(0);
+//   }
+// }
+
+// .portfolio {
+//   padding: 110px 0px 30px 0px;
+// }
+
+// .portfolioContainer {
+// }
+
+// @keyframes fadeIn {
+//   0% {
+//     opacity: 0;
+//   }
+
+//   100% {
+//     opacity: 1;
+//   }
+// }
+
+// .title {
+//   color: $lightMainColor;
+//   font-size: 24px;
+//   font-weight: 700;
+//   letter-spacing: 1.2px;
+//   margin-bottom: 18px;
+//   text-transform: uppercase;
+
+//   animation: fadeIn 0.8s ease-in-out forwards;
+//   @media screen and (min-width: $tablet) {
+//     font-size: 36px;
+//     margin-bottom: 42px;
+//   }
+// }
+
+// .galery {
+//   display: -ms-grid;
+//   display: grid;
+//   grid-template-columns: repeat(1, 1fr);
+//   row-gap: 20px;
+//   animation: fadeUp 0.8s ease-in-out forwards;
+
+//   @media screen and (min-width: $tablet) {
+//     grid-template-columns: repeat(2, 1fr);
+//     -webkit-box-pack: space-around;
+//     -ms-flex-pack: space-around;
+//     justify-content: space-around;
+//     row-gap: 18px;
+//     -webkit-column-gap: 24px;
+//     -moz-column-gap: 24px;
+//     column-gap: 24px;
+//   }
+//   @media screen and (min-width: $laptop) {
+//     grid-template-columns: repeat(3, 1fr);
+//     row-gap: 24px;
+//   }
+
+//   @media screen and (min-width: $desktop) {
+//     -webkit-box-pack: center;
+//     -ms-flex-pack: center;
+//     justify-content: center;
+//   }
+// }
+
+// .imgContainer {
+//   position: relative;
+//   width: 100%;
+//   height: 500px;
+//   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+//     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+//   border-radius: 4px;
+//   overflow: hidden;
+//   display: block;
+// }
+
+// .img {
+//   object-fit: cover;
+// }

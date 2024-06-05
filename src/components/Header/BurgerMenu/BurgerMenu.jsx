@@ -10,12 +10,12 @@ import styles from './BurgerMenu.module.scss';
 const BurgerMenu = () => {
   const { burgerMenu, setBurgerMenu } = useContext(SiteContext);
 
+  const burgerMenuContainer = burgerMenu
+    ? styles.burgerMenuContainerOpen + ' ' + styles.burgerMenuContainer
+    : styles.burgerMenuContainerClose + ' ' + styles.burgerMenuContainer;
+
   return (
-    <div
-      className={`${styles.burgerMenuContainerOpen} ${
-        burgerMenu ? styles.open : ''
-      }`}
-    >
+    <div className={burgerMenuContainer}>
       <ul className={styles.headerLinks}>
         {navLinks.map(({ id, title, href }) => (
           <li className={styles.link} key={id}>
