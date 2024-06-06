@@ -11,10 +11,15 @@ const PortfolioPage = () => {
           {portfolio.map(({ id, services, img, title }) => (
             <li className={styles.portfolioCard} key={id}>
               <div className={styles.portfolioContent}>
-                <h3 className={styles.subtitle}>{title} :</h3>
+                <h3 className={styles.subtitle}>{title}</h3>
                 <ul className={styles.servicesList}>
                   {services.map((value, index) => (
-                    <li key={index}>&#9679; {value}</li>
+                    <li key={index} className={styles.servicesItem}>
+                      {value}
+                    </li>
+                    // <li key={index} className={styles.servicesItem}>
+                    //   &#9679; {value}
+                    // </li>
                   ))}
                 </ul>
               </div>

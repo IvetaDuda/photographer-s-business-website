@@ -3,6 +3,7 @@
 import { SiteContext } from '@/context/SiteContext';
 import { navLinks } from '@/data/navLinks';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useContext } from 'react';
 import BurgerBtn from '../Buttons/BurgerBtn/BurgerBtn';
 import ButtonLink from '../Buttons/ButtonLink/ButtonLink';
@@ -11,7 +12,7 @@ import BurgerMenu from './BurgerMenu/BurgerMenu';
 import styles from './Header.module.scss';
 
 const Header = () => {
-  const { burgerMenu } = useContext(SiteContext);
+  const pathName = usePathname();
 
   return (
     <header className={styles.header}>
@@ -19,7 +20,14 @@ const Header = () => {
         <Logo />
         <ul className={styles.headerLinks}>
           {navLinks.map(({ id, title, href }) => (
-            <li className={styles.link} key={id}>
+            <li
+              className={
+                pathName === href
+                  ? styles.link + ' ' + styles.active
+                  : styles.link
+              }
+              key={id}
+            >
               <Link href={href}>{title}</Link>
             </li>
           ))}
@@ -31,7 +39,6 @@ const Header = () => {
         />
         <BurgerBtn />
         <BurgerMenu />
-        {/* {burgerMenu && <BurgerMenu />} */}
       </div>
     </header>
   );

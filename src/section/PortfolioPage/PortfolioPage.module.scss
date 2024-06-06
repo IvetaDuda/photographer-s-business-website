@@ -100,11 +100,14 @@
 }
 
 .subtitle {
+  position: relative;
   font-size: 16px;
   line-height: 1.6;
   letter-spacing: 0.02em;
+  // color: $accentColor;
   color: $lightMainColor;
   margin-bottom: 24px;
+
   @media screen and (min-width: $tablet) {
     font-size: 16px;
     margin-bottom: 24px;
@@ -128,13 +131,34 @@
   line-height: 1.6;
   letter-spacing: 0.02em;
   color: $lightMainColor;
+  padding-left: 16px;
   @media screen and (min-width: $tablet) {
     font-size: 12px;
     margin-bottom: 24px;
   }
   @media screen and (min-width: $desktop) {
+    padding-left: 24px;
     font-size: 20px;
     margin-bottom: 0px;
+  }
+}
+
+.servicesItem {
+  position: relative;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 35%;
+    left: -16px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $accentColor;
+    @media screen and (min-width: $desktop) {
+      top: 43%;
+      left: -24px;
+    }
   }
 }
 
