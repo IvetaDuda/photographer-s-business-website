@@ -18,7 +18,9 @@ const PortfolioHome = () => {
                 <h3 className={styles.titleContent}>{title}</h3>
                 <ul className={styles.servicesList}>
                   {services.map((value, index) => (
-                    <li key={index}>&#9679; {value}</li>
+                    <li key={index} className={styles.servicesItem}>
+                      {value}
+                    </li>
                   ))}
                 </ul>
               </div>
