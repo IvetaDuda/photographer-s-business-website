@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import ButtonLink from '../../components/Buttons/ButtonLink/ButtonLink';
 import styles from './AboutMeHome.module.scss';
 
@@ -18,9 +19,14 @@ const AboutMeHome = () => {
           </li>
           <li className={styles.text}>
             Дякую, що завітали на мій сайт. Запрошую переглянути моє{' '}
-            <span className="accentText">портфоліо</span> та{' '}
-            <span className="accentText">зв&rsquo;язатися зі мною</span> для
-            обговорення ваших побажань.
+            <Link href="/portfolio" className="accentText">
+              портфоліо
+            </Link>{' '}
+            та{' '}
+            <Link href="/contacts" className="accentText">
+              зв&rsquo;язатися зі мною
+            </Link>{' '}
+            для обговорення ваших побажань.
           </li>
           <li>
             <ButtonLink title="Більше про мене" href="/aboutMe" />

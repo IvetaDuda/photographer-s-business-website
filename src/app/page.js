@@ -1,3 +1,4 @@
+import BackToTop from '@/components/Buttons/BackToTop/BackToTop';
 import Hero from '@/section/Hero/Hero';
 import dynamic from 'next/dynamic';
 // import styles from './page.module.css';
@@ -21,6 +22,7 @@ export default function Home() {
       <DynamicAboutMeHome />
       <DynamicPortfolioHome />
       <DynamicContactHome />
+      <BackToTop />
     </>
   );
 }

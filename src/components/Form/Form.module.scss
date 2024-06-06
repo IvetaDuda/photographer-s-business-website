@@ -1,7 +1,12 @@
 @import '../../app/variables';
 
 .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   row-gap: 24px;
 }
@@ -29,13 +34,21 @@
 }
 
 .inputGroupName {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   row-gap: 24px;
   @media screen and (min-width: 768px) {
     row-gap: 0px;
     column-gap: 24px;
+    -webkit-flex-direction: row;
     flex-direction: row;
   }
 }

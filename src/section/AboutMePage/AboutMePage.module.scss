@@ -37,14 +37,25 @@
 }
 
 .aboutMeContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   row-gap: 20px;
   @media screen and (min-width: $laptop) {
-    display: flex;
+    -webkit-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     align-items: flex-start;
     row-gap: 0px;
@@ -53,7 +64,12 @@
 
 .textList {
   width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   row-gap: 20px;
   @media screen and (min-width: $laptop) {
@@ -79,6 +95,9 @@
   position: relative;
   width: 85vw;
   height: 65vh;
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
   @media screen and (min-width: $laptop) {
     width: 40vw;
   }
@@ -88,6 +107,7 @@
 }
 
 .img {
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -98,6 +118,7 @@
 .btn {
   margin: 0 auto;
   @media screen and (min-width: $tablet) {
+    margin: 0;
     margin-left: auto;
   }
 }

@@ -63,9 +63,13 @@
     row-gap: 18px;
   }
   @media screen and (min-width: $laptop) {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
-    justify-content: center;
     row-gap: 42px;
   }
 
@@ -74,9 +78,16 @@
 }
 
 .portfolioCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 
   @media screen and (min-width: $laptop) {
     justify-content: space-between;
@@ -91,9 +102,16 @@
   display: none;
 
   @media screen and (min-width: $laptop) {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
-    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     align-items: flex-start;
     column-gap: 0px;
   }
@@ -124,7 +142,12 @@
 }
 
 .servicesList {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   row-gap: 16px;
   font-size: 14px;
@@ -164,13 +187,22 @@
 
 .itemImgContainer {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   row-gap: 24px;
   @media screen and (min-width: $tablet) {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
-    align-items: center;
+    -webkit-flex-direction: row;
     flex-direction: row;
     column-gap: 24px;
     row-gap: 0px;
@@ -210,6 +242,7 @@
 }
 
 .img {
+  -o-object-fit: cover;
   object-fit: cover;
 }
 

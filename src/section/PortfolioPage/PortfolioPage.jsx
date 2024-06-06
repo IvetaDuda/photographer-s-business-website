@@ -1,3 +1,4 @@
+import BackToTop from '@/components/Buttons/BackToTop/BackToTop';
 import { portfolio } from '@/data/portfolio';
 import Image from 'next/image';
 import styles from './PortfolioPage.module.scss';
@@ -39,6 +40,7 @@ const PortfolioPage = () => {
             </li>
           ))}
         </ul>
+        <BackToTop />
       </div>
     </section>
   );
