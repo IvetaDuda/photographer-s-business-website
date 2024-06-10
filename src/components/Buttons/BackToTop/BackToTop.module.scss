@@ -23,7 +23,12 @@
   border: none;
   outline: none;
   cursor: pointer;
-  transition: bottom 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  transition: bottom 0.5s ease-in-out, opacity 0.5s ease-in-out,
+    background-color 0.5s ease-in-out;
+  &:hover,
+  &:focus {
+    background-color: $hoverBtnColor;
+  }
 }
 
 .toTopBtnHidden {
